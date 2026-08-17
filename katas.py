@@ -59,10 +59,27 @@ def filtrar_palabras(palabras, objetivo):
 compra = ["manzana", "banana", "naranja", "pera", "sandía"]
 resultado = filtrar_palabras(compra, "ana")
 print(resultado)
+    
+#4. Genera una función que calcule la diferencia entre los valores de dos listas.
+#Usa la función map()
 
+def diferencia_listas(lista1, lista2):
+    
+    """Calcula la diferencia elemento a elemento entre dos listas de números.
 
+    Args:
+        lista1 (list): Primera lista de números.
+        lista2 (list): Segunda lista de números.
 
+    Returns:
+        list: Lista con la diferencia (lista1[i] - lista2[i]) de cada par.
+    """
 
+    return list(map(lambda x, y: x - y, lista1, lista2))
+
+lista1 = [10, 20, 30]
+lista2 = [1, 2, 3]
+print(diferencia_listas(lista1, lista2))
 
 
 
