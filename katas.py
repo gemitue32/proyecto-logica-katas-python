@@ -145,6 +145,20 @@ def tuplas_a_strings(lista_tuplas):
 nota = [(1, 2), (3, 4), (5, 6)]
 print(tuplas_a_strings(nota))
 
+#8. Escribe un programa que pida al usuario dos números e intente dividirlos. Si el usuario ingresa un valor no numérico
+#o intenta dividir por cero, maneja esas excepciones de manera adecuada. Asegúrate de mostrar un mensaje
+#indicando si la división fue exitosa o no.
+
+try:
+    num1 = float(input("Ingrese el primer número: "))
+    num2 = float(input("Ingrese el segundo número:"))
+    resultado = num1 / num2
+    print(f"División exitosa: {resultado}")
+except ValueError:
+    print("Error: Debe ingresar un valor numérico.")
+except ZeroDivisionError:
+    print("Error: No se puede dividir por cero.")
+
 
 
 
