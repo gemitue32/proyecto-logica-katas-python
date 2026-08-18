@@ -178,11 +178,29 @@ def excluir_mascotas(mascotas):
 animales = ["Perro", "Gato", "Mapache", "Tigre", "Conejo", "Cocodrilo", "Oso"]
 print(excluir_mascotas(animales))
 
+#10. Escribe una función que reciba una lista de números y calcule su promedio. Si la lista está vacía, lanza una
+#excepción personalizada y maneja el error adecuadamente.
 
+class ListaVaciaError(Exception):
+    """Excepción personalizada para indicar que la lista está vacía."""
+    pass
+def calcular_promedio(numeros):
+    '''Calcula el promedio de una lista de números.
 
+    Args:
+        numeros (list): lista de números.
+    Returns:
+        float: Promedio de los números en la lista.
+    '''
+    if not numeros:
+        raise ListaVaciaError("La lista está vacía. No se puede calcular el promedio.")
+    return sum(numeros) / len(numeros)
+print("-----Prueba con la lista vacía-----")
+try:
+    print(calcular_promedio([]))
+except ListaVaciaError as error:
+    print(f"Error: {error}")
 
-
-
-
-
-    
+print("---Prueba con lista con datos---")
+promedio = calcular_promedio([10, 20, 30, 40, 50])
+print(f"El promedio es: {promedio}")
