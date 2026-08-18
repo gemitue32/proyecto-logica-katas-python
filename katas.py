@@ -64,7 +64,7 @@ print(resultado)
 #Usa la función map()
 
 def diferencia_listas(lista1, lista2):
-    
+
     """Calcula la diferencia elemento a elemento entre dos listas de números.
 
     Args:
@@ -80,6 +80,43 @@ def diferencia_listas(lista1, lista2):
 lista1 = [10, 20, 30]
 lista2 = [1, 2, 3]
 print(diferencia_listas(lista1, lista2))
+
+#5. Ecribe una función que tome una lista de números como parámetro y un valor opcional nota_aprobado, que por
+#defecto es 5. La función debe calcular la media de los números en la lista y determinar si la media es mayor o igual
+#que nota aprobado. Si es así, el estado será "aprobado", de lo contrario, será "suspenso". La función debe devolver
+#una tupla que contenga la media y el estado.
+
+def evaluar_notas(numeros, nota_aprobado=5):
+    
+    """Calcula la media de una lista de números y determina si aprueba.
+
+    Args:
+        numeros (list | tuple): Lista o tupla de números a evaluar.
+        nota_aprobado (int, optional): Nota mínima para aprobar. Defaults to 5.
+
+    Returns:
+        tuple: Una tupla con la media (float) y el estado ("aprobado" o "suspenso").
+    """
+
+    
+    media = sum(numeros) / len(numeros)
+    if media >= nota_aprobado:
+        estado = "aprobado"
+    else:
+        estado = "suspenso"
+    return media, estado
+
+
+numeros = (4, 3, 5, 8, 9)
+print(evaluar_notas(numeros))
+
+#6. Escribe una función que calcule el factorial de un número de manera recursiva.
+
+
+
+
+
+
 
 
 
