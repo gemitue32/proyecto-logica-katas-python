@@ -129,7 +129,21 @@ def factorial(n):
 numero = 3
 print(factorial(numero))
 
+#7. Genera una función que convierta una lista de tuplas a una lista de strings. Usa la función map()
 
+def tuplas_a_strings(lista_tuplas):
+    """Convierte una lista de tuplas a una lista de strings.
+
+    Args:
+        lista_tuplas (list): Lista de tuplas.
+
+    Returns:
+        list: Lista de strings.
+    """
+    return list(map(str, lista_tuplas))
+
+nota = [(1, 2), (3, 4), (5, 6)]
+print(tuplas_a_strings(nota))
 
 
 
