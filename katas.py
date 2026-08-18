@@ -159,6 +159,27 @@ except ValueError:
 except ZeroDivisionError:
     print("Error: No se puede dividir por cero.")
 
+#9. Escribe una función que tome una lista de nombres de mascotas como parámetro y devuelva una nueva lista
+#excluyendo ciertas mascotas prohibidas en España. La lista de mascotas a excluir es ["Mapache", "Tigre",
+#"Serpiente Pitón", "Cocodrilo", "Oso"].Usa la función filter()
+
+def excluir_mascotas(mascotas):
+    '''Excluye ciertas mascotas prohibidas en España de una lista de nombres de mascotas.
+    
+    Args:
+        mascotas (list): Lista de nombres de mascotas.
+    Returns:
+        list: Nueva lista de mascotas excluyendo las prohibidas.
+               
+    '''
+    mascotas_prohibidas = ["Mapache", "Tigre", "Serpiente Pitón", "Cocodrilo", "Oso"]
+    return list(filter(lambda mascota: mascota not in mascotas_prohibidas, mascotas)) 
+
+animales = ["Perro", "Gato", "Mapache", "Tigre", "Conejo", "Cocodrilo", "Oso"]
+print(excluir_mascotas(animales))
+
+
+
 
 
 
