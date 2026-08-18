@@ -112,6 +112,22 @@ print(evaluar_notas(numeros))
 
 #6. Escribe una función que calcule el factorial de un número de manera recursiva.
 
+def factorial(n):
+    """Calcula el factorial de un número de manera recursiva.
+
+    Args:
+        n (int): Número para calcular el factorial.
+
+    Returns:
+        int: Factorial del número.
+    """
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+numero = 3
+print(factorial(numero))
 
 
 
