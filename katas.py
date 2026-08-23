@@ -221,3 +221,18 @@ except ValueError:
     print("Error: debes introducir un número entero")
 except EdadInvalidaError as error:
     print(f"Error: {error}")
+
+#12. Genera una función que al recibir una frase devuelva una lista con la longitud de cada palabra. Usa la función map()
+def longitudes_palabras(frase):
+    """Devuelve una lista con la longitud de cada palabra en una frase.
+    Args:
+        frase (str): la frase a analizar.
+    Returns:
+        list: una lista con la longitud de cada palabra.
+    """
+    palabras = frase.split()
+    return list(map(len, palabras))
+
+frase = "Hola mundo, esto es una prueba"
+print(longitudes_palabras(frase))
+
