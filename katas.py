@@ -204,3 +204,20 @@ except ListaVaciaError as error:
 print("---Prueba con lista con datos---")
 promedio = calcular_promedio([10, 20, 30, 40, 50])
 print(f"El promedio es: {promedio}")
+
+#11. Escribe un programa que pida al usuario que introduzca su edad. Si el usuario ingresa un valor no numérico o un
+#valor fuera del rango esperado (por ejemplo, menor que 0 o mayor que 120), maneja las excepciones
+#adecuadamente.
+
+class EdadInvalidaError(Exception):
+    """Excepción personalizada para indicar que la edad ingresada es inválida."""
+    pass
+try:
+    edad = int(input("Introduce tu edad: "))
+    if edad < 0 or edad > 120:
+        raise EdadInvalidaError("La edad debe estar entre 0 y 120.")
+    print(f"Tu edad es: {edad}")
+except ValueError:
+    print("Error: debes introducir un número entero")
+except EdadInvalidaError as error:
+    print(f"Error: {error}")
