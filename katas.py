@@ -236,3 +236,25 @@ def longitudes_palabras(frase):
 frase = "Hola mundo, esto es una prueba"
 print(longitudes_palabras(frase))
 
+#13. Genera una función la cual, para un conjunto de caracteres, devuelva una lista de tuplas con cada letra en
+#mayúsculas y minúsculas. Las letras no pueden estar repetidas .Usa la función map()
+
+def mayus_minus(conjunto_letras):
+    """Devuelve una lista de tuplas con cada letra en mayúsculas y minúsculas, sin repeticiones.
+    Args:
+        conjunto_letras (set): un conjunto de caracteres.
+        
+    Returns:
+        list: una lista de tuplas con cada letra en mayúsculas y minúsculas.
+    """
+    
+    
+    return list(map(lambda letra: (letra.upper(), letra.lower()), conjunto_letras))
+
+conjunto = {'a', 'b', 'c'}
+print(mayus_minus(conjunto))
+
+
+
+
+
