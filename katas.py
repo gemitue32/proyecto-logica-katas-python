@@ -280,6 +280,27 @@ numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 resultado = list(map(sumar_tres, numeros))
 print(resultado)
 
+#16. Escribe una función que tome una cadena de texto y un número entero n como parámetros y devuelva una lista de
+#todas las palabras que sean más largas que n. Usa la función filter()
+
+def palabras_mas_largas(cadena, n):
+    """Devuelve una lista de palabras que sean más largas que n.
+    Args:
+        cadena (str): Cadena de texto.
+        n (int): Número entero.
+                
+    Returns:
+        list: Lista de palabras que sea más larga que n.
+    
+        
+        """
+    texto = cadena.split()
+    return list(filter(lambda palabra: len(palabra) > n, texto))
+
+colores = "amarillo rojo azul negro rosa"
+resultado = palabras_mas_largas(colores, 4)
+print(resultado)
+
      
     
     

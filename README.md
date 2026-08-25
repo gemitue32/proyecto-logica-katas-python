@@ -25,6 +25,18 @@ clases y buenas prácticas.
 - [x] Ejercicios 1-15
 - [ ] Ejercicios 16-41
 
+## Dificultades y aprendizajes
+
+- **Ejercicio 16** (palabras más largas que n, con `filter()`): este ejercicio me
+  costó bastante. Al principio me confundí con el ejemplo de prueba: usé una
+  lista/tupla de palabras en vez de una cadena de texto como pedía el enunciado,
+  y por eso `.split()` me daba error. Luego tuve problemas para entender el orden
+  de los argumentos dentro de `filter()` — puse `n` donde debía ir la lista de
+  palabras, y en el `lambda` intenté "llamar" a la palabra como si fuera una
+  función en vez de comparar su longitud con `len()`. Tuve que parar y repasar
+  la estructura de `filter(funcion, lista)` paso a paso para entender qué papel
+  jugaba cada pieza antes de conseguir que funcionara.
+
 ## Cómo ejecutar el código
 
 Desde la terminal, dentro de la carpeta del proyecto:
