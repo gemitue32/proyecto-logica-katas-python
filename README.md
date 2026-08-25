@@ -22,8 +22,8 @@ clases y buenas prácticas.
 
 ## Progreso
 
-- [x] Ejercicios 1-14
-- [ ] Ejercicios 15-41
+- [x] Ejercicios 1-15
+- [ ] Ejercicios 16-41
 
 ## Cómo ejecutar el código
 

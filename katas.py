@@ -273,6 +273,12 @@ def palabras_que_empiezan(lista_palabra, letra):
 fruta = palabras_que_empiezan(["manzana", "pera", "naranja", "fresa", "platano"], "n")
 print(fruta)
 
+#15. Crea una función lambda que sume 3 a cada número de una lista dada.
+
+sumar_tres = lambda x: x + 3
+numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+resultado = list(map(sumar_tres, numeros))
+print(resultado)
 
      
     
