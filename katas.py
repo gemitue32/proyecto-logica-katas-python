@@ -254,6 +254,31 @@ def mayus_minus(conjunto_letras):
 conjunto = {'a', 'b', 'c'}
 print(mayus_minus(conjunto))
 
+#14. Crea una función que retorne las palabras de una lista de palabras que comience con una letra en especifico. Usa la
+#función filter()
+
+def palabras_que_empiezan(lista_palabra, letra):
+    """Devuelve una lista de palabra y que comience con una letra específica.
+    Args:
+        lista_palabra (list): Lista de palabras a filtrar.
+        letra (str): Letra por la que debe empezar la palabra.
+            
+    Returns:
+        list: Lista de palabras que comience con una letra especifica.
+
+    
+    """
+    return list(filter(lambda palabra: palabra.startswith(letra), lista_palabra))
+
+fruta = palabras_que_empiezan(["manzana", "pera", "naranja", "fresa", "platano"], "n")
+print(fruta)
+
+
+     
+    
+    
+    
+
 
 
 
