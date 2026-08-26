@@ -322,8 +322,36 @@ def lista_digitos(digitos):
 
 print(lista_digitos([5, 7, 2]))
 
+#18. Escribe un programa en Python que cree una lista de diccionarios que contenga información de estudiantes
+#(nombre, edad, calificación) y use la función filter para extraer a los estudiantes con una calificación mayor o igual a
+#90. Usa la función filter()
 
+def estudiantes_aprobados(estudiantes):
 
+    """Devuelve a los estudiantes con una calificación mayor o igual a 90.
+        Args:
+            estudiantes (list): Lista de estudiantes.
+                
+                        
+        Returns:
+            list: Lista de diccionarios de los estudiantes con calificaciones mayor o igual a 90.
+            
+                
+        """
+
+    
+
+    return list(filter(lambda estudiante: estudiante["calificacion"] >= 90, estudiantes))
+
+estudiantes = [
+    {"nombre": "Paula", "edad": 28, "calificacion": 92},
+    {"nombre": "Antonio", "edad": 25, "calificacion": 82},
+    {"nombre": "Javier", "edad": 30, "calificacion": 95},
+    {"nombre": "Laura", "edad": 32, "calificacion": 80},
+
+    ]
+
+print(estudiantes_aprobados(estudiantes))
 
 
 
