@@ -353,6 +353,15 @@ estudiantes = [
 
 print(estudiantes_aprobados(estudiantes))
 
+#19. Crea una función lambda que filtre los números impares de una lista dada.  
+      
+filtrar_impares = lambda x: x % 2 != 0
+numeros = [5, 7, 10, 2, 4, 3, 6]
+resultado = list(filter(filtrar_impares, numeros))
+print(resultado)
+
+    
+
 
 
 
