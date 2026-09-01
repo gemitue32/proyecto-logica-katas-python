@@ -360,9 +360,18 @@ numeros = [5, 7, 10, 2, 4, 3, 6]
 resultado = list(filter(filtrar_impares, numeros))
 print(resultado)
 
-    
-
-
+#20. Para una lista con elementos tipo integer y string obtén una nueva lista sólo con los valores int. Usa la función
+#filter()
+def solo_enteros(lista_mixta):
+    """Devuelve una lista sólo con los valores int de una lista mixta.
+    Args:
+        lista_mixta (list): Lista con elementos tipo integer y string.
+    Returns:
+        list: Nueva lista sólo con los valores int.
+    """
+    return list(filter(lambda x: isinstance(x, int), lista_mixta))
+print(solo_enteros([1, "dos", 3, "cuatro", 5, "seis"]))
+  
 
 
 
