@@ -435,6 +435,15 @@ def contar_caracteres(cadena):
 
 print(contar_caracteres("Hola Mundo"))
 
+#26. Crea una función lambda que calcule el resto de la división entre dos números dados.
+
+resto = lambda x, y: x % y
+num1 = 10
+num2 = 3
+print(resto(num1, num2))
+
+
+
 
   
 
