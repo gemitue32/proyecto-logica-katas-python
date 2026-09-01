@@ -377,6 +377,20 @@ cubo = lambda x: x ** 3
 numero = 3
 print(cubo(numero))
 
+#22. Dada una lista numérica, obtén el producto total de los valores de dicha lista.Usa la función reduce() .
+
+from functools import reduce
+
+def producto_total(numeros):
+    """Calcula el producto total de los valores de una lista numérica.
+    Args:
+        numeros (list): lista numérica.
+    Returns:
+        int: producto total de los valores de la lista.
+    """
+    return reduce(lambda x, y: x * y, numeros)
+print(producto_total([1, 3, 5, 8, 12]))
+
   
 
 
