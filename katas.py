@@ -422,6 +422,19 @@ def diferencia_total(numeros):
 
 print(diferencia_total([100, 20, 30, 10]))
 
+#25. Crea una función que cuente el número de caracteres en una cadena de texto dada.
+
+def contar_caracteres(cadena):
+    """Cuenta el número de caracteres en una cadena de texto.
+    Args:
+        cadena (str): Cadena de texto.
+    Returns:
+        int: Número de caracteres en la cadena.
+    """
+    return len(cadena)
+
+print(contar_caracteres("Hola Mundo"))
+
 
   
 
