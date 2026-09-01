@@ -407,6 +407,21 @@ def concatenar_palabras(palabras):
     return reduce(lambda acumulado, palabra: acumulado + " " + palabra, palabras)
 print(concatenar_palabras(["Hola", "mundo", "esto", "es", "una", "prueba"]))
 
+#24. Calcula la diferencia total en los valores de una lista. Usa la función reduce() .
+
+from functools import reduce
+
+def diferencia_total(numeros):
+    """Calcula la diferencia total en los valores de una lista.
+    Args:
+        numeros (list): Lista de números.
+    Returns:
+        int: Diferencia total de los valores de la lista.
+    """
+    return reduce(lambda x, y: x - y, numeros)
+
+print(diferencia_total([100, 20, 30, 10]))
+
 
   
 
