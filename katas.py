@@ -391,6 +391,23 @@ def producto_total(numeros):
     return reduce(lambda x, y: x * y, numeros)
 print(producto_total([1, 3, 5, 8, 12]))
 
+#23. Concatena una lista de palabras.Usa la función reduce() .
+
+from functools import reduce
+
+def concatenar_palabras(palabras):
+    """Concatena una lista de palabras en una sola cadena.
+    Args:
+        palabras (list): Lista de palabras.
+    Returns:
+        str: Cadena resultante de la concatenación de las palabras.
+    
+
+    """
+    return reduce(lambda acumulado, palabra: acumulado + " " + palabra, palabras)
+print(concatenar_palabras(["Hola", "mundo", "esto", "es", "una", "prueba"]))
+
+
   
 
 
