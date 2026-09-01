@@ -371,6 +371,12 @@ def solo_enteros(lista_mixta):
     """
     return list(filter(lambda x: isinstance(x, int), lista_mixta))
 print(solo_enteros([1, "dos", 3, "cuatro", 5, "seis"]))
+
+#21. Crea una función que calcule el cubo de un número dado mediante una función lambda.
+cubo = lambda x: x ** 3
+numero = 3
+print(cubo(numero))
+
   
 
 
