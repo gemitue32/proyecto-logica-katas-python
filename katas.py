@@ -442,7 +442,18 @@ num1 = 10
 num2 = 3
 print(resto(num1, num2))
 
+#27. Crea una función que calcule el promedio de una lista de números.
 
+def promedio_lista(numeros):
+    """Calcula el promedio de una lista de numeros.
+    Args:
+        numeros (list): Lista de números.
+    Returns:
+        float: Promedio de los números en la lista.
+    """
+    return sum(numeros) / len(numeros)
+
+print(promedio_lista([10, 30, 60, 40, 50]))
 
 
   
