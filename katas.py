@@ -473,6 +473,25 @@ def primer_duplicado(lista):
 
 print(primer_duplicado([1, 2, 3, 4, 5, 3, 6]))
 
+#29. Crea una función que convierta una variable en una cadena de texto y enmascare todos los caracteres con el
+#carácter '#', excepto los últimos cuatro.
+
+def enmascarar(variable, n=4):
+    """Convierte una variable en una cadena de texto y enmascara todos los caracteres con '#', excepto los últimos n.
+    Args:
+        variable (str): Variable a convertir y enmascarar.
+        n (int): Número de caracteres al final que no se enmascaran.
+    Returns:
+        str: Cadena enmascarada."""
+    texto = str(variable)
+    if len(texto) <= n:
+        return texto
+    parte_oculta = texto[:-n]
+    parte_visible = texto[-n:]
+    return '#' * len(parte_oculta) + parte_visible
+print(enmascarar("1234567890"))
+
+
 
 
   
