@@ -491,6 +491,19 @@ def enmascarar(variable, n=4):
     return '#' * len(parte_oculta) + parte_visible
 print(enmascarar("1234567890"))
 
+#30. Crea una función que determine si dos palabras son anagramas, es decir, si están formadas por las mismas letras
+#pero en diferente orden.
+
+def son_anagramas(palabra1, palabra2):
+    """Determina si dos palabras son anagramas.
+    Args:
+        palabra1 (str): Primera palabra.
+        palabra2 (str): Segunda palabra.
+    Returns:
+        bool: True si son anagramas, False en caso contrario.
+    """
+    return sorted(palabra1.lower()) == sorted(palabra2.lower())
+print(son_anagramas("Amor", "roma"))
 
 
 
