@@ -22,8 +22,8 @@ clases y buenas prácticas.
 
 ## Progreso
 
-- [x] Ejercicios 1-30
-- [ ] Ejercicios 31-41
+- [x] Ejercicios 1-31
+- [ ] Ejercicios 32-41
 
 ## Dificultades y aprendizajes
 

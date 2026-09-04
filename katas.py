@@ -505,6 +505,29 @@ def son_anagramas(palabra1, palabra2):
     return sorted(palabra1.lower()) == sorted(palabra2.lower())
 print(son_anagramas("Amor", "roma"))
 
+#31. Crea una función que solicite al usuario ingresar una lista de nombres y luego solicite un nombre para buscar en
+#esa lista. Si el nombre está en la lista, se imprime un mensaje indicando que fue encontrado, de lo contrario, se
+#lanza una excepción.
+
+def buscar_nombre():
+    """Solicita al usuario ingresar una lista de nombres y luego busca un nombre en esa lista.
+    Raises: 
+        ValueError: Si el nombre no se encuentra en la lista.
+    
+    """
+    lista_nombres = []
+    cantidad = int(input("¿Cuantos nombres quieres introducir? "))
+    for i in range(cantidad):
+        nombre = input("Introduce un nombre: ")
+        lista_nombres.append(nombre)
+    nombre_buscado = input("Introduce un nombre para buscar: ")
+    if nombre_buscado in lista_nombres:
+        print(f"{nombre_buscado} fue encontrado en la lista.")
+    else:
+        raise ValueError(f"{nombre_buscado} no fue encontrado en la lista.")
+
+buscar_nombre()
+
 
 
   
