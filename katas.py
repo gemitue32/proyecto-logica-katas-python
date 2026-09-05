@@ -223,6 +223,7 @@ except EdadInvalidaError as error:
     print(f"Error: {error}")
 
 #12. Genera una función que al recibir una frase devuelva una lista con la longitud de cada palabra. Usa la función map()
+
 def longitudes_palabras(frase):
     """Devuelve una lista con la longitud de cada palabra en una frase.
     Args:
@@ -230,11 +231,21 @@ def longitudes_palabras(frase):
     Returns:
         list: una lista con la longitud de cada palabra.
     """
-    palabras = frase.split()
+    palabras = []
+    palabra_actual = ""
+    for letra in frase:
+        if letra == " ":
+            palabras.append(palabra_actual)
+            palabra_actual = ""
+        else:
+            palabra_actual += letra
+    palabras.append(palabra_actual)
     return list(map(len, palabras))
 
 frase = "Hola mundo, esto es una prueba"
 print(longitudes_palabras(frase))
+
+
 
 #13. Genera una función la cual, para un conjunto de caracteres, devuelva una lista de tuplas con cada letra en
 #mayúsculas y minúsculas. Las letras no pueden estar repetidas .Usa la función map()
@@ -294,8 +305,16 @@ def palabras_mas_largas(cadena, n):
     
         
         """
-    texto = cadena.split()
-    return list(filter(lambda palabra: len(palabra) > n, texto))
+    palabras = []
+    palabra_actual = ""
+    for letra in cadena:
+        if letra == " ":
+            palabras.append(palabra_actual)
+            palabra_actual = ""
+        else:
+            palabra_actual += letra
+    palabras.append(palabra_actual)
+    return list(filter(lambda palabra: len(palabra) > n, palabras))
 
 colores = "amarillo rojo azul negro rosa"
 resultado = palabras_mas_largas(colores, 4)
@@ -528,6 +547,33 @@ def buscar_nombre():
 
 buscar_nombre()
 
+#32. Crea una función que tome un nombre completo y una lista de empleados, busque el nombre completo en la lista y
+#devuelve el puesto del empleado si está en la lista, de lo contrario, devuelve un mensaje indicando que la persona
+#no trabaja aquí.
+
+def buscar_puesto(nombre_completo, lista_empleados):
+    """Busca el puesto de un empleado en una lista de empleados.
+    Args:
+        nombre_completo (str): Nombre completo del empleado a buscar.
+        lista_empleados (list): Lista de diccionarios con información de empleados.
+    Returns:
+        str: El puesto del empleado si se encuentra, o un mensaje indicando que no trabaja aquí.
+    """
+    for empleado in lista_empleados:
+        if empleado["nombre"] == nombre_completo:
+            return empleado["puesto"]
+    return f"{nombre_completo} no trabaja aquí."
+
+empleados = [
+
+     {"nombre": "Juan Pérez", "puesto": "Gerente"},
+     {"nombre": "María López", "puesto": "Analista"},
+     {"nombre": "Carlos García", "puesto": "Desarrollador"}
+
+
+   
+]
+print(buscar_puesto("María López", empleados))
 
 
   
