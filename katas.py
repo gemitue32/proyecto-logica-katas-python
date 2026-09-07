@@ -575,6 +575,73 @@ empleados = [
 ]
 print(buscar_puesto("María López", empleados))
 
+#33. Crea una función lambda que sume elementos correspondientes de dos listas dadas.
+
+sumar_listas = lambda x, y: x + y
+lista1 = [1, 2, 3]
+lista2 = [4, 5, 6]
+resultado = list(map(sumar_listas, lista1, lista2))
+print(resultado)
+
+#34. Crea la clase Arbol , define un árbol genérico con un tronco y ramas como atributos. Los métodos disponibles son:
+#crecer_tronco , nueva_rama , crecer_ramas , quitar_rama e info_arbol . El objetivo es implementar estos métodos para
+#manipular la estructura del árbol.
+
+class Arbol:
+    def __init__(self):
+        """Inicializa un árbol con un tronco de longitud 1 y una liasta vacía de ramas."""
+        self.tronco = 1
+        self.ramas = []
+
+    def crecer_tronco(self):
+        """Aumenta la longitud del tronco en 1."""
+        self.tronco += 1
+
+    def nueva_rama(self):
+        """Agrega una nueva rama al árbol."""
+        self.ramas.append(1)
+        
+    def crecer_ramas(self):
+        """Aumenta la longitud de todas las ramas en 1."""
+        for i in range(len(self.ramas)):
+            self.ramas[i] += 1
+        
+    def quitar_rama(self, posicion):
+        """Quita una rama del árbol en la posición especificada."""
+        self.ramas.pop(posicion)
+
+        
+    def info_arbol(self):
+        """Devuelve información sobre la longitud del tronco, el número de ramas y las longitudes"""
+        return f"Longitud del tronco: {self.tronco}, Número de ramas: {len(self.ramas)}, Longitudes de las ramas: {self.ramas}"
+    
+#-----Prueba completa de la clase Arbol------
+
+mi_arbol = Arbol()
+mi_arbol.crecer_tronco()    
+mi_arbol.nueva_rama()
+mi_arbol.crecer_ramas()
+mi_arbol.nueva_rama()
+mi_arbol.nueva_rama()
+mi_arbol.quitar_rama(2)
+print(mi_arbol.info_arbol())
+
+#-----Prueba de la clase Arbol con dos instancias------
+
+arbol1 = Arbol()
+arbol1.crecer_tronco()
+arbol1.nueva_rama()
+arbol1.nueva_rama()
+arbol1.crecer_ramas()
+arbol1.crecer_ramas()
+
+arbol2 = Arbol()
+arbol2.nueva_rama()
+arbol2.crecer_ramas()
+arbol2.quitar_rama(0)
+print(arbol1.info_arbol())
+print(arbol2.info_arbol())
+
 
   
 
