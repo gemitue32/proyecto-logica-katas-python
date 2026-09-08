@@ -5,6 +5,9 @@ Consiste en resolver 41 katas (ejercicios prácticos) que cubren tipos de datos,
 estructuras de datos, condicionales, bucles, funciones (map/filter/reduce/lambda),
 clases y buenas prácticas.
 
+> **Nota:** la numeración salta del ejercicio 34 al 36 porque así lo indica
+> el propio enunciado del proyecto (no existe un ejercicio 35).
+
 ## Estructura del repositorio
 
 - `katas.py`: contiene todos los ejercicios resueltos. Cada uno va precedido de
@@ -22,10 +25,20 @@ clases y buenas prácticas.
 
 ## Progreso
 
-- [x] Ejercicios 1-34
-- [ ] Ejercicios 36-41
+- [x] Ejercicios 1-36
+- [ ] Ejercicios 37-41
 
+## Dificultades y aprendizajes
 
+- **Ejercicio 36** (clase UsuarioBanco): al reproducir el caso de uso exacto
+  del enunciado, detecté una inconsistencia en los números de ejemplo: Bob
+  empieza con 50, se le agregan 20 (queda con 70), y después se pide transferir
+  80 desde Bob a Alicia — una cantidad mayor de la que Bob tiene disponible.
+  Mi método `retirar_dinero` lanza correctamente un `ValueError` en este caso,
+  ya que no tiene sentido permitir una transferencia sin saldo suficiente.
+  Decidí mantener la validación intacta (en vez de "forzar" que el ejemplo
+  funcionara) y capturar el error con `try/except` para que el programa
+  gestione el fallo de forma controlada, sin interrumpirse.
 
 ## Cómo ejecutar el código
 

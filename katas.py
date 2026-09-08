@@ -594,7 +594,7 @@ class Arbol:
         self.ramas = []
 
     def crecer_tronco(self):
-        """Aumenta la longitud del tronco en 1."""
+        """Aumenta la longitud del tronco en 1."""      
         self.tronco += 1
 
     def nueva_rama(self):
@@ -615,7 +615,7 @@ class Arbol:
         """Devuelve información sobre la longitud del tronco, el número de ramas y las longitudes"""
         return f"Longitud del tronco: {self.tronco}, Número de ramas: {len(self.ramas)}, Longitudes de las ramas: {self.ramas}"
     
-#-----Prueba completa de la clase Arbol------
+#-----Caso de uso------
 
 mi_arbol = Arbol()
 mi_arbol.crecer_tronco()    
@@ -626,21 +626,78 @@ mi_arbol.nueva_rama()
 mi_arbol.quitar_rama(2)
 print(mi_arbol.info_arbol())
 
-#-----Prueba de la clase Arbol con dos instancias------
+#36. Crea la clase UsuarioBanco ,representa a un usuario de un banco con su nombre, saldo y si tiene o no cuenta
+#corriente. Proporciona métodos para realizar operaciones como retirar dinero, transferir dinero desde otro usuario y
+#agregar dinero al saldo.
 
-arbol1 = Arbol()
-arbol1.crecer_tronco()
-arbol1.nueva_rama()
-arbol1.nueva_rama()
-arbol1.crecer_ramas()
-arbol1.crecer_ramas()
+class UsuarioBanco:
+    def __init__(self, nombre: str, saldo: float, cuenta_corriente: bool):
+        """Inicializa un ususrio de banco con nombre, saldo y si tiene cuenta corriente
+        Args:
+            nombre(str): Nombre del usuario.
+            saldo(float): Saldo del usuario.
+            cuenta_corriente(bool): Indica si el usuario tiene cuenta corriente.
+        Returns:
+            None
+        """
+        self.nombre = nombre
+        self.saldo = saldo
+        self.cuenta_corriente = cuenta_corriente
 
-arbol2 = Arbol()
-arbol2.nueva_rama()
-arbol2.crecer_ramas()
-arbol2.quitar_rama(0)
-print(arbol1.info_arbol())
-print(arbol2.info_arbol())
+    def retirar_dinero(self, cantidad: float):
+        """Retira dinero del saldo del usuario.
+        Args:
+            cantidad(float): Cantidad a retirar.
+        Raises:
+            ValueError: Si la cantidad a retirar es mayor que el saldo disponible.
+        """
+        if cantidad > self.saldo:
+            raise ValueError("Saldo insuficiente para realizar el retiro.")
+        self.saldo -= cantidad
+    def transferir_dinero(self, otro_usuario, cantidad: float):
+        """Transferir dinero a otro usuario.
+        Args:
+            otro_usuario(UsuarioBanco): Usuario al que se le transferirá el dinero.
+            cantidad(float): Cantidad a transferir.  
+        Returns:
+            None      
+        """
+        otro_usuario.retirar_dinero(cantidad)
+        self.agregar_dinero(cantidad)
+
+    def agregar_dinero(self, cantidad: float):
+        """Agrega dinero al saldo del usuario.
+        Args:
+            cantidad(float): Cantidad a agregar.
+        Returns:
+            None
+        """
+        self.saldo += cantidad
+
+#-----Caso de uso------        
+Alicia = UsuarioBanco("Alicia", 100, True)
+print(f"Saldo de Alicia antes de cualquier operación: {Alicia.saldo}")
+
+Bob = UsuarioBanco("Bob", 50, True)
+print(f"Saldo de Bob antes de cualquier operación: {Bob.saldo}")
+
+Bob.agregar_dinero(20)
+print(f"Saldo de Bob despues de agregar dinero: {Bob.saldo}")
+
+try:
+    Alicia.transferir_dinero(Bob, 80)
+    print(f"Saldo de Bob despues de transferir dinero a Alicia: {Bob.saldo}")
+    print(f"Saldo de Alicia despues de recibir dinero de Bob: {Alicia.saldo}")
+except ValueError as error:
+    print(f"No se pudo completar la transferencia: {error}")
+
+Alicia.retirar_dinero(50)
+print(f"Saldo de Alicia despues de retirar dinero: {Alicia.saldo}")
+
+
+            
+
+
 
 
   
