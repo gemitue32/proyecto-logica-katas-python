@@ -694,8 +694,86 @@ except ValueError as error:
 Alicia.retirar_dinero(50)
 print(f"Saldo de Alicia despues de retirar dinero: {Alicia.saldo}")
 
+#37. Crea una función llamada procesar_texto que procesa un texto según la opción especificada: contar_palabras ,
+#reemplazar_palabras , eliminar_palabra . Estas opciones son otras funciones que tenemos que definir primero y llamar dentro
+#de la función procesar_texto .
 
-            
+def contar_palabras(texto):
+    """Cuenta el número de palabras en un texto.
+    Args:
+        texto(str): Texto a procesar.
+    Returns:
+        dict: Diccionario con las palabras y sus frecuencias.
+    """
+    palabras = []
+    palabra_actual = ""
+    for letra in texto:
+        if letra == " ":
+            palabras.append(palabra_actual)
+            palabra_actual = ""
+        else:
+            palabra_actual += letra
+    palabras.append(palabra_actual)
+    frecuencias = {}
+    for palabra in palabras:
+        frecuencias[palabra] = frecuencias.get(palabra, 0) + 1
+    return frecuencias
+
+def reemplazar_palabras(texto, palabra_original, palabra_nueva):
+    """Reemplaza una palabra original por una nueva palabra en un texto.
+    Args:
+        texto(str): Texto a procesar.
+        palabra_original(str): Palabra a reemplazar.
+        palabra_nueva(str): Palabra que reemplazará a la original.
+    Returns:
+        str: Texto con la palabra reemplazada.
+    """
+    return texto.replace(palabra_original, palabra_nueva)
+
+def eliminar_palabra(texto, palabra):
+    """Elimina una palabra específica de un texto.
+    Args:
+        texto(str): Texto a procesar.
+        palabra(str): Palabra a eliminar.
+    Returns:
+        str: Texto con la palabra eliminada.
+    """
+    return texto.replace(palabra, "")
+
+def procesar_texto(texto, opcion, *args):
+    """Procesa un texto según la opción especificada.
+    Args:
+        texto(str): Texto a procesar.
+        opcion(str): Opción de procesamiento ('contar', 'reemplazar', 'eliminar').
+        *args: Argumentos adicionales necesarios para la opción seleccionada.
+    Returns:
+        any: Resultado del procesamiento según la opción seleccionada.
+    """
+    if opcion == "contar":
+        return contar_palabras(texto)
+    elif opcion == "reemplazar":
+        return reemplazar_palabras(texto, args[0], args[1])
+    elif opcion == "eliminar":
+        return eliminar_palabra(texto, args[0])
+
+#-----Caso de uso------
+texto = "Hola mundo, esto es una prueba de procesamiento de texto."
+
+opcion1 = "contar"
+resultado1= procesar_texto(texto, opcion1)
+print(f"Resultado de contar palabras: {resultado1}")
+
+opcion2 = "reemplazar"
+resultado2 = procesar_texto(texto, opcion2, "mundo", "universo")
+print(f"Resultado de reemplazar palabras: {resultado2}")
+
+opcion3 = "eliminar"
+resultado3 = procesar_texto(texto, opcion3, "prueba")
+print(f"Resultado de eliminar palabra: {resultado3}")
+
+
+
+
 
 
 

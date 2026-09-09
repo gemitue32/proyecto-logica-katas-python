@@ -5,8 +5,8 @@ Consiste en resolver 41 katas (ejercicios prácticos) que cubren tipos de datos,
 estructuras de datos, condicionales, bucles, funciones (map/filter/reduce/lambda),
 clases y buenas prácticas.
 
-> **Nota:** la numeración salta del ejercicio 34 al 36 porque así lo indica
-> el propio enunciado del proyecto (no existe un ejercicio 35).
+**Nota:** la numeración salta del ejercicio 34 al 36 porque así lo indica
+el propio enunciado del proyecto (no existe un ejercicio 35).
 
 ## Estructura del repositorio
 
@@ -25,8 +25,8 @@ clases y buenas prácticas.
 
 ## Progreso
 
-- [x] Ejercicios 1-36
-- [ ] Ejercicios 37-41
+- [x] Ejercicios 1-37
+- [ ] Ejercicios 38-41
 
 ## Dificultades y aprendizajes
 
