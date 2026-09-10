@@ -784,6 +784,22 @@ elif hora >= 13 and hora <= 19:
 else:
     print("Es de noche")
 
+#39. Escribe un programa que determine qué calificación en texto tiene un alumno en base a su calificación numérica.
+#Las reglas de calificación son:
+#- 0 - 69 insuficiente
+#- 70 - 79 bien
+#- 80 - 89 muy bien
+#- 90 - 100 excelente
+
+calificacion = int(input("Introduce la calificación del alumno (0-100): "))
+if calificacion >= 0 and calificacion <= 69:
+    print("Insuficiente")
+elif calificacion >= 70 and calificacion <= 79:
+    print("Bien")
+elif calificacion >= 80 and calificacion <= 89:
+    print("Muy bien")
+else:
+    print("Excelente")
 
 
 
