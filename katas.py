@@ -1,3 +1,7 @@
+from functools import reduce
+import math
+
+
 #1. Escribe una función que reciba una cadena de texto como parámetro 
 # y devuelva un diccionario con las frecuencias
 #de cada letra en la cadena. Los espacios no deben ser considerados.
@@ -323,7 +327,6 @@ print(resultado)
 #17. Crea una función que tome una lista de dígitos y devuelva el número correspondiente. Por ejemplo, [5,7,2]
 #corresponde al número quinientos setenta y dos (572). Usa la función reduce()
 
-from functools import reduce
 def lista_digitos(digitos):
      """Devuelve un número de una lista de dígitos.
     Args:
@@ -800,6 +803,46 @@ elif calificacion >= 80 and calificacion <= 89:
     print("Muy bien")
 else:
     print("Excelente")
+
+#40. Escribe una función que tome dos parámetros: figura (una cadena que puede ser "rectangulo" , "circulo" o
+#"triangulo" ) y datos (una tupla con los datos necesarios para calcular el área de la figura).
+
+def calcular_area(figura, datos):
+    """Calcula el área de una figura geométrica según la figura y los datos proporcionados.
+    Args:
+        figura(str): Tipo de figura geométrica ("rectangulo", "circulo", "triangulo").
+        datos(tuple): Tupla con los datos necesarios para calcular el área.
+    Returns:
+        float: Área de la figura geomética."""
+
+    if figura == "rectangulo":
+        base = datos[0]
+        altura = datos[1]
+        area_rectangulo = base * altura
+        return area_rectangulo
+    elif figura == "circulo":
+        pi = math.pi
+        radio = datos[0]
+        radio_cuadrado = radio ** 2
+        area_circulo = pi * radio_cuadrado
+        return area_circulo
+    elif figura == "triangulo":
+        base = datos[0]
+        altura = datos[1]
+        area_triangulo = (base * altura) / 2
+        return area_triangulo
+
+resultado_rectangulo = calcular_area("rectangulo", (5, 10))
+print(f"Area del rectángulo: {resultado_rectangulo}")
+
+resultado_circulo = calcular_area("circulo", (7,))
+print(f"Area del círculo: {resultado_circulo}")
+
+resultado_triangulo = calcular_area("triangulo", (5, 3))
+print(f"Area del triangulo: {resultado_triangulo}")
+
+
+
 
 
 
