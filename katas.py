@@ -771,6 +771,20 @@ opcion3 = "eliminar"
 resultado3 = procesar_texto(texto, opcion3, "prueba")
 print(f"Resultado de eliminar palabra: {resultado3}")
 
+#38. Genera un programa que nos diga si es de noche, de día o tarde según la hora proporcionada por el usuario.
+#6:00 a 12:59 → día
+#13:00 a 19:59 → tarde
+#20:00 a 5:59 → noche
+
+hora = int(input("Introduce la hora 0-23: "))
+if hora >= 6 and hora <= 12:
+    print("Es de día")
+elif hora >= 13 and hora <= 19:
+    print("Es de tarde")
+else:
+    print("Es de noche")
+
+
 
 
 

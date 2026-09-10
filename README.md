@@ -25,8 +25,8 @@ el propio enunciado del proyecto (no existe un ejercicio 35).
 
 ## Progreso
 
-- [x] Ejercicios 1-37
-- [ ] Ejercicios 38-41
+- [x] Ejercicios 1-38
+- [ ] Ejercicios 39-41
 
 ## Dificultades y aprendizajes
 
@@ -39,6 +39,14 @@ el propio enunciado del proyecto (no existe un ejercicio 35).
   Decidí mantener la validación intacta (en vez de "forzar" que el ejemplo
   funcionara) y capturar el error con `try/except` para que el programa
   gestione el fallo de forma controlada, sin interrumpirse.
+  
+- **Ejercicio 37** (procesar_texto con *args): fue el ejercicio más complejo
+  del proyecto, al combinar varias funciones auxiliares (contar_palabras,
+  reemplazar_palabras, eliminar_palabra) con una función controladora que
+  decide cuál ejecutar según el valor de `opcion`. Lo más difícil fue entender
+  cómo `*args` empaqueta un número variable de argumentos en una tupla, y
+  cómo acceder a cada uno con `args[0]`, `args[1]`... según la opción
+  necesitara uno o dos datos adicionales.
 
 ## Cómo ejecutar el código
 
