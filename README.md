@@ -26,7 +26,6 @@ el propio enunciado del proyecto (no existe un ejercicio 35).
 ## Progreso
 
 - [x] Ejercicios 1-41
-- [ ] Ejercicios 41
 
 ## Dificultades y aprendizajes
 
